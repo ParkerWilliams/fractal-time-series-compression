@@ -109,7 +109,7 @@ class BaseCompressor(ABC):
         if np.any(np.isnan(value_data)) or np.any(np.isinf(value_data)):
             raise ValueError("Value data contains NaN or infinite values")
     
-    def _time_operation(self, operation):
+    def _time_operation(self):
         """Context manager for timing operations."""
         class TimingContext:
             def __init__(self):
